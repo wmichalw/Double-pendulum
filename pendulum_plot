@@ -1,0 +1,9 @@
+set term png size 1024,600
+unset border
+unset xtics
+unset ytics
+set output 'pendulum.png'
+set xrange [-3:3]
+set yrange [-3:3]
+set style line 1 lc rgb '#0060ad' lt 1 lw 3 pt 7 ps 2
+plot "data1.txt"  with linespoints  ls 1 ps 2 pt 7   notitle  , "data2.txt" with linespoints notitle ls 1 ps 2 pt 7,"dots.txt" with points  ps 0.3 pt 7 notitle
